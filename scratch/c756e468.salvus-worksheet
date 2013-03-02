@@ -1,0 +1,146 @@
+{
+	"session_uuid": "3bd1fdb3-e732-49d7-baeb-99efba108ce1",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "3a6c1605-d687-4a4a-9151-09b2e9ab9cfa",
+			"input": "@parallel(6)\ndef f(n):\n    factor(2^997-1)\n    \n    ",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "7cbb2919-da46-4775-a379-ecf4a85ac808",
+			"input": "3",
+			"output": [
+				{
+					"stdout": "3"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "4b2c6a9c-1bd7-4833-a3be-b878d149121a",
+			"input": "k = f([1..6])",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c3d6eabb-204d-4878-9021-8b7f9395f144",
+			"input": "list(k)",
+			"output": [
+				{
+					"stderr": "Error in lines 1-1\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 382, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "  File \"/home/wstein/sage/build/sage-5.6/local/lib/python2.7/site-packages/sage/parallel/use_fork.py\", line 121, in __call__\n"
+				},
+				{
+					"stderr": "    pid = os.wait()[0]\n"
+				},
+				{
+					"stderr": "KeyboardInterrupt\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "ae4e87ce-cc01-4199-b784-76e7f5b10aff",
+			"input": "search_src('fork')",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "6ddef3a4-459f-40b3-b393-c2baa996f56b",
+			"input": "def f(input, output):\n    print \"got: \", input, output\n\n@fork(callback=f)\ndef g(n):\n    return n^3\n\n\ng(100)\n\n\n@parallel(callback=f)\ndef h(n):\n    return n^3\n\nh([1..100])\n\n\nFork()(f)(...)"
+		},
+		{
+			"id": "b64d5762-28ee-425b-878c-8c5d7bd54860",
+			"input": "os.fork("
+		},
+		{
+			"id": "481ffdaf-aea3-4fad-9f13-588e7d198978",
+			"input": "2"
+		},
+		{
+			"title": "Section",
+			"content": [
+				{
+					"id": "d8c58373-2d66-4caa-8f6c-b8ad38270e94",
+					"input": "def f(n):\n    pid = os.fork()\n    if not pid:  # child\n        sleep(3)\n        salvus.execute_javascript(\"console.log('hi from child')\")\n        print \"hello from %s\"%(os.getpid())\n    else: # parent\n        print \"Parent: %s\"%os.getpid()      ",
+					"output": [
+						{
+							"stdout": ""
+						}
+					]
+				},
+				{
+					"id": "9a262c47-1c4b-41ef-ac73-b303610db5a8",
+					"input": "os.getpid()\nf(10)",
+					"output": [
+						{
+							"stdout": "30663"
+						},
+						{
+							"stdout": "\n"
+						},
+						{
+							"stdout": "hello from 1730\n"
+						},
+						{
+							"stdout": ""
+						}
+					]
+				},
+				{
+					"id": "9f11aab4-2c0e-4c1c-bc70-a13f5a876c40",
+					"input": "f(10)",
+					"output": [
+						{
+							"stdout": "Parent: 3930"
+						},
+						{
+							"stdout": "\n"
+						},
+						{
+							"stdout": ""
+						}
+					]
+				}
+			],
+			"id": "c7745590-730f-407a-96ea-f601784077f9"
+		},
+		{
+			"id": "4ce6b5a2-8874-45bb-ba00-12aa727aaedb",
+			"input": "2"
+		},
+		{
+			"id": "a1c46eec-9819-42aa-bb76-a0fa992e823a"
+		}
+	]
+}

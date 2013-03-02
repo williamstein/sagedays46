@@ -1,0 +1,22 @@
+{
+	"session_uuid": "f2e9a74a-1106-41fc-8dbc-501372c665f7",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "69518ccb-561b-4d92-85f0-ee94ba1cf5e0",
+			"input": "salvus.javascript('console.log(obj)', obj={1r:5r})",
+			"output": [
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "8b4202ea-6845-42ce-9bdf-2b3025ecb0ba"
+		}
+	]
+}

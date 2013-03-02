@@ -1,0 +1,88 @@
+{
+	"session_uuid": "fd9f24f3-b091-48fb-be97-61b4a1c42f81",
+	"title": "salvus_d3 sandbox",
+	"description": "line plot with cached data",
+	"content": [
+		{
+			"id": "7648f99d-f6da-4cfc-93cb-b9da6c54c8ff",
+			"note": "The only necessary code for this example is located in \"salvus_d3.py\" &nbsp;Let's load and update the module to make sure everything is up to date.",
+			"input": "%auto\nsys.path.append(os.path.abspath('.'))\nimport salvus_d3\nreload(salvus_d3)",
+			"output": [
+				{
+					"stdout": "<module 'salvus_d3' from '/home/6b548f2f/vivek/salvus_d3.pyc'>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e7bcf346-0061-4c9a-b0c0-32ceae98553b",
+			"note": "We can define some styling for SVG elements ahead of time, which will be inherited using the usual cascade rules.",
+			"input": "%html\n<style>\n    /* tell the SVG path to be a thin blue line without any area fill */\n    path {\n        stroke: steelblue;\n        stroke-width: 2;\n        fill: none;\n    }\n    \n    .axis {\n      shape-rendering: crispEdges;\n    }\n\n    .x.axis line {\n      stroke: black;\n    }\n\n    .x.axis .minor {\n      stroke-opacity: 1;\n    }\n\n    .x.axis path {\n      stroke: #000;\n    }\n\n    .y.axis line, .y.axis path {\n      fill: none;\n      stroke: #000;\n    }\n</style>",
+			"output": [
+				{
+					"html": "<style>\n    /* tell the SVG path to be a thin blue line without any area fill */\n    path {\n        stroke: steelblue;\n        stroke-width: 2;\n        fill: none;\n    }\n    .axis {\n      shape-rendering: crispEdges;\n    }\n    .x.axis line {\n      stroke: black;\n    }\n    .x.axis .minor {\n      stroke-opacity: 1;\n    }\n    .x.axis path {\n      stroke: #000;\n    }\n    .y.axis line, .y.axis path {\n      fill: none;\n      stroke: #000;\n    }\n</style>"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "cea3b9a8-0054-49e0-921c-2640c11ed24b",
+			"note": "Let's make some data to graph. &nbsp;It will be a list of lines. &nbsp;A line is a list of points. &nbsp;A point is an object with fields 'x' and 'y'",
+			"input": "x = srange(float(0),float(10),float(0.01))\n\nz = var('z')\nsin_fast = fast_callable(sin(z), vars = [\"z\"], domain = float)\n\nlist_of_lines = []\nfor i in range(100):\n    current_line = []\n    for j in x:\n    \tcurrent_line.append({'x':float(j), 'y':float(sin_fast(j*(i+1)/5))})\n    list_of_lines.append(current_line)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "1850c1ff-ebdd-456c-af04-d35fab3a2b09",
+			"note": "To plot, we'll use d3_line_graph on one of our lines. &nbsp;It needs to be passed a salvus object with information about where to put the output.",
+			"input": "d3_graph_object = salvus_d3.d3_line_graph(list_of_lines[20],salvus)",
+			"output": [
+				{
+					"html": "<div id=graph-3eb18533-764c-4499-a03e-028d3b3a1e80 class=\"aGraph\" style=\"position:relative;top:0px;left:0px; float:left;\"></div>"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "97ed97bb-bbcf-4283-99bb-ca4bf267cd46",
+			"note": "Now we can make a slider with all the information about possible UI states cached in the jQuery callback. &nbsp;This data should eventually be stored in the document somewhere and allow the possibility of attaching multiple graphics listeners.",
+			"input": "salvus_d3.make_cached_slider(list_of_lines, d3_graph_object, salvus)",
+			"output": [
+				{
+					"html": "<div id=\"wrapper-b1ea5658-a72d-4f27-a2d9-e0885675a2c7\" style=\"width:1000px;height:40px\">\n    \t\t\t\t\t<div id=\"b1ea5658-a72d-4f27-a2d9-e0885675a2c7\" style=\"top:15px;left:30px\"></div>\t\n                   </div>"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e077e4a5-8372-4fae-bd73-021a903d9c8b",
+			"note": "Now we can play with the CSS styling here to update the graph without replotting or regenerating anything!",
+			"input": "%html\n<style>\npath {\n    stroke: steelblue;\n    stroke-width: 5;\n    fill: none;\n}\n</style>",
+			"output": [
+				{
+					"html": "<style>\npath {\n    stroke: steelblue;\n    stroke-width: 5;\n    fill: none;\n}\n</style>"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "4d70cd5d-09fc-4dce-ba9d-505902841386"
+		}
+	]
+}

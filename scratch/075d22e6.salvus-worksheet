@@ -1,0 +1,97 @@
+{
+	"session_uuid": "bb2103f5-9d0f-4b2f-91bc-d490a00332b7",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "57aff94d-8609-4a15-b59f-c391c1ba7790",
+			"input": "x = 10\nreset('x')\nx",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e7ccde70-f9aa-484f-b009-e89685157fd5",
+			"input": "%reset x, y",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "fbe10ce5-f974-4df5-b7c4-6eb71942a64b",
+			"input": "%var x y z",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e871dcea-0239-4802-ab0b-b743030a5130",
+			"input": "%var z",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "ed2c37ca-d608-4efc-a4ea-dec8ca0756c7",
+			"input": "a = fast_callable(sin(x^3), vars=[x], domain=float)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "81373e25-ca02-4504-ab1f-c0350c5aed98",
+			"input": "k = float(10)\n%timeit a(k)",
+			"output": [
+				{
+					"stdout": "625 loops, best of 3: 277 ns per loop"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "509a7105-13cc-4641-b695-43fb982c13eb",
+			"input": "g(x) = sin(x^3)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "2406ee7e-ea04-4a24-989d-6ceaa6af4c1c",
+			"input": "k = float(10)\n%timeit g(k)",
+			"output": [
+				{
+					"stdout": "625 loops, best of 3: 128 µs per loop"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c795d9eb-5b2a-415a-944a-fccbd8b4afee"
+		},
+		{
+			"id": "9c8768c2-943a-4bb7-9951-fdfefc0b6ada"
+		}
+	]
+}

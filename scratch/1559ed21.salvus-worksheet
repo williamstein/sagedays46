@@ -1,0 +1,94 @@
+{
+	"session_uuid": "b46205da-06b3-4c0e-8c4c-48c4413a3b88",
+	"title": "Interact",
+	"description": "No description",
+	"content": [
+		{
+			"id": "a7f69b98-8d18-4127-a94b-22a8951545be",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "2e1bc9c2-067a-4bae-93f5-b282d2f9846f",
+			"input": "%interact0\n\nif not hasattr(interact, 'a'):\n    interact.a = slider(1,10)\n    \nif not hasattr(interact, 'b'):\n    interact.b = False\n\nprint interact.a, interact.b\n\n",
+			"output": [
+				{
+					"stdout": ""
+				}
+			],
+			"hide": [
+				"insert-below"
+			]
+		},
+		{
+			"id": "aa73354a-fab9-49d0-8a2e-9a85b2d4f8c0",
+			"input": "interact.controls.",
+			"output": [
+				{
+					"stderr": "Error in lines 1-1\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 397, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "AttributeError: Controls instance has no __call__ method\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "158ec27c-ba31-49b6-b003-536cbfe90942",
+			"input": "@interact\ndef f(n=5, m=7, k=(1..100), changed=False):\n    \n    if 'k' in interact.changed():\n        f.n = k/m\n    else:\n        f.k = interact.n*interact.m\n        \n        ",
+			"output": [
+				{
+					"stdout": ""
+				}
+			],
+			"hide": [
+				"insert-below"
+			]
+		},
+		{
+			"id": "41ffe977-3b29-4682-9c2f-873007910332",
+			"input": "f.n\nf['n'].link(g['xyz'], ...)"
+		},
+		{
+			"id": "91102cf3-724b-4200-8a93-e709e300efef",
+			"input": "@interact\ndef f(n=g['n']):        \n    print n\n    \nf.n = 10",
+			"output": [
+				{
+					"stdout": ""
+				}
+			],
+			"hide": [
+				"insert-below"
+			]
+		},
+		{
+			"id": "bc19891b-f44f-402d-b1e2-706c4143b3e1",
+			"input": "@interact\ndef g(m=(1..10)):\n    f.n = ",
+			"output": [
+				{
+					"stdout": ""
+				}
+			],
+			"hide": [
+				"insert-below"
+			]
+		},
+		{
+			"id": "c346327e-70ba-47e8-858a-fb4972f92f7c"
+		}
+	]
+}

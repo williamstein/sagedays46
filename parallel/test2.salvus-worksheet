@@ -1,0 +1,112 @@
+{
+	"session_uuid": "ed9505e9-dcfd-405e-a0f4-3cfd6dcb58ec",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "45411c91-624d-4342-8aae-f76f955c1c2f"
+		},
+		{
+			"id": "f00a25af-3a56-4176-829d-112cb6378a81",
+			"input": "%fork\n\nE = EllipticCurve('5077a')\n%time v = E.aplist(10^5)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 25201"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "CPU time: 0.32 s, Wall time: 0.32 s"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "6f608189-3618-488b-99b9-55f995048519",
+			"input": "len(v)",
+			"output": [
+				{
+					"stdout": "9592"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "b1d04478-e369-40ef-98ce-e225e0c3ebc5",
+			"input": "v[:10]",
+			"output": [
+				{
+					"stdout": "[-2, -3, -4, -4, -6, -4, -4, -7, -6, -6]"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "67088633-a7cf-4348-8e07-25f15513b845",
+			"input": "%fork a = random_matrix(QQ,500)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 23905"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "347307ce-e40f-420e-82dd-9fda745f3913",
+			"input": "%fork d1 = a.det()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 23907"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "4dbf3f2c-3de9-49b4-bece-ef7d03e84292",
+			"input": "%fork d2 = a.det()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 24175"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "d1bcfa11-0685-449f-a01b-a801609bdf0b",
+			"input": "d1 == d2",
+			"output": [
+				{
+					"stdout": "True"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "277625a4-f1f1-489f-8a81-0e364dedb75f"
+		}
+	]
+}

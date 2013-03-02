@@ -1,0 +1,1219 @@
+{
+	"session_uuid": "f57ca16f-717c-43e3-ad61-b4bf142347ee",
+	"title": "Demo",
+	"description": "This illustrates stuff",
+	"content": [
+		{
+			"id": "85531f88-51fe-43e3-adea-b5744b5eaf36",
+			"input": "%fork(wait=4994)\n\n%time\nsleep(5)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 32620"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "CPU time: 5.01 s, Wall time: 0.00 s"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "988c67c8-1830-456a-91a7-b72cfa407bf4"
+		},
+		{
+			"id": "9c99bc55-519f-45d1-8520-9dcb9ca9de3a",
+			"input": "%fork\n%gp\n\ne = ellinit([1,2,3,4,5]); e",
+			"output": [
+				{
+					"stdout": "Forked subprocess 30742"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "[1, 2, 3, 4, 5, 9, 11, 29, 35, -183, -3429, -10351, 6128487/10351, [-1.6189099322673713423780009396072169751, -0.31554503386631432881099953019639151248 - 2.0925470969119586079816894466366945829*I, -0.31554503386631432881099953019639151248 + 2.0925470969119586079816894466366945829*I]~, 2.7807400137667297710631976271813584994, 1.3903700068833648855315988135906792497 - 1.0687497763561930661592635474375038788*I, 3.1096482423243803285501491221965830079 + 2.350988701644575016 E-38*I, 1.5548241211621901642750745610982915040 + 1.0643747452102737569438859937299427442*I, 2.9719152678179096707716479509361896060]"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "1b558ec7-037d-44b9-940f-e5875c0066da",
+			"input": "def f(n):\n    return len(str(factorial(n)))\n\n%fork\nf(10^6)\n\n\n",
+			"output": [
+				{
+					"stdout": "Forked subprocess 31544"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "5565709"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "fdaa6c23-951e-4400-a9bb-ec3bba705e05",
+			"input": "f(10^6)",
+			"output": [
+				{
+					"stdout": "5565709"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "3713b556-45be-4cdc-b33d-d0bf2214cd85",
+			"input": "fork.__call__",
+			"output": [
+				{
+					"stdout": "<bound method Fork.__call__ of <sage_salvus.Fork object at 0x4014d10>>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "84187366-a0f7-4475-a7f0-1254c92bcbfa",
+			"input": "f.func_code",
+			"output": [
+				{
+					"stdout": "<code object f at 0x7b16a30, file \"\", line 1>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "0da1d194-994a-4b94-a3c6-6d85dcda1bf9",
+			"input": "%fork\n\ndef f(n):\n    return n^3\ng = f\na = 5",
+			"output": [
+				{
+					"stdout": "Forked subprocess 30452"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "70690847-7ac9-4f7b-98bc-47c1bccb9338",
+			"input": "f",
+			"output": [
+				{
+					"stderr": "Error in lines 1-1\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 397, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "NameError: name 'f' is not defined\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "0d0e7501-bdf8-4178-820e-45f7c94d730a",
+			"input": "%auto\n\nos.chdir(os.environ['HOME']+'/parallel/')\nattach(\"async.py\")",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "69f5bbdb-e246-443d-b531-2d0ab0c0c0bc",
+			"input": "%fork \nset_random_seed(int(cputime()*1e8))\nsleep(100)\nx = random()\nprint x",
+			"output": [
+				{
+					"stdout": "Forked subprocess 21606"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "4698ccbe-c51e-43e8-be79-52bd7d4acc99",
+			"input": "fork.children()",
+			"output": [
+				{
+					"stdout": "{21606: u'0819b697-5a68-41cb-90ea-82bbe7f0b0c5'}"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c1813f87-5c1f-4288-ac31-035e003885d3",
+			"input": "!ps ax |grep 21606\n!ps ax |grep clean",
+			"output": [
+				{
+					"stdout": "22119 pts/8    S+     0:00 grep 21606\n"
+				},
+				{
+					"stdout": "22125 pts/8    S+     0:00 grep clean\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "52eeb8a0-b5db-4e4c-90a5-b09321ee9807",
+			"input": "salvus._conn.send_json({'event':'output', 'id':fork._children[-1]['execute_id'], 'done':True}) ",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "f8273827-477b-4023-9e4e-59995aedaf65",
+			"input": "!ps ax |grep 18027",
+			"output": [
+				{
+					"stdout": "18038 pts/8    S+     0:00 grep 18027\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "524865f2-35a6-4adb-a7df-8e8ac3a63ec7",
+			"input": "%fork \nset_random_seed(cputime())\nsleep(5)\nx = random()\nprint x",
+			"output": [
+				{
+					"stdout": "Forked subprocess 19393"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "0.111439293741"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "e89227a6-8f34-42c4-89a8-5cc09089c6cc",
+			"input": "int(cputime()*1000000",
+			"output": [
+				{
+					"stdout": "68003.0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "a92583e2-d807-4efd-987a-e1b58ad0bb4f",
+			"input": "%fork \nset_random_seed(cputime())\nsleep(5)\nx = random()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 15592"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "1a9451b3-2292-432b-b339-5acf0cb1d9f1",
+			"input": "!ps ax |grep 15592",
+			"output": [
+				{
+					"stdout": "15603 pts/8    S+     0:00 grep 15592\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "ed5dc3b9-ba96-468a-9596-7907299f8b5d",
+			"input": "%fork \nset_random_seed(cputime())\nsleep(5)\nx = random()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 15214"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "24e0c213-4152-4e42-ace1-f8db3ec1f18c",
+			"input": "!ps ax |grep 15214",
+			"output": [
+				{
+					"stdout": "15225 pts/8    S+     0:00 grep 15214\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "619837ea-32b3-486b-aaff-d6512ff4027c",
+			"input": "%fork\n\nsleep(50)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 14078"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "80115f54-40c9-49ff-a107-768283537b5e",
+			"input": "os.kill(14078,9)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c02abf04-98ba-4739-9607-97c0be5e64b9",
+			"input": "!ps ax |grep 14078",
+			"output": [
+				{
+					"stdout": "14090 pts/8    S+     0:00 grep 14078\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "4e5901b7-dbd8-4cf7-a754-95e2493c1b6e",
+			"input": "%fork\n\na = 200\nsleep(2)\nb = 30\nprint \"b = \", b\nx = a+b/0",
+			"output": [
+				{
+					"stdout": "b = "
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "30"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stderr": "Error in lines 5-5\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 397, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "  File \"element.pyx\", line 1797, in sage.structure.element.RingElement.__div__ (sage/structure/element.c:14834)\n"
+				},
+				{
+					"stderr": "  File \"integer.pyx\", line 1786, in sage.rings.integer.Integer._div_ (sage/rings/integer.c:13151)\n"
+				},
+				{
+					"stderr": "  File \"integer_ring.pyx\", line 347, in sage.rings.integer_ring.IntegerRing_class._div (sage/rings/integer_ring.c:5715)\n"
+				},
+				{
+					"stderr": "ZeroDivisionError: Rational division by zero\n"
+				}
+			]
+		},
+		{
+			"id": "50b2b56a-cc1c-4b3f-be8f-52897bc048bb",
+			"input": "%fork\n\n"
+		},
+		{
+			"id": "3d0e2eec-0f01-4c63-a719-7a5c552cbf7a",
+			"input": "x",
+			"output": [
+				{
+					"stdout": "10"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "92551e22-03bf-435b-b201-e84b83058aa8",
+			"input": "a = random_matrix(QQ,500)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c7b9c29f-650b-4e60-8ff4-b5c61f155ef1",
+			"input": "a",
+			"output": [
+				{
+					"stdout": "500 x 500 dense matrix over Rational Field (type 'print a.str()' to see all of the entries)"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "42063d1d-b061-4ef5-9832-a0deeae26d9b",
+			"input": "a = 5\n\nfork(\"\"\"\nfor n in range(10):\n    sleep(1)\n    print n\n\"\"\")    \n\nb = 20",
+			"output": [
+				{
+					"stdout": "Forked subprocess 29656"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "1"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "2"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "3"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "4"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "6"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "7"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "8"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "9"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "bf06d356-45fe-408e-a9e0-0df42bba0bcc",
+			"input": "n",
+			"output": [
+				{
+					"stdout": "9"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "2bd7d2c2-5de0-4244-8cae-9f1a70d98467",
+			"input": "a, b",
+			"output": [
+				{
+					"stdout": "(5, 20)"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "abc2a511-758d-41ec-abb7-ec142daf9681",
+			"input": "p = 29377\ntry:\n    os.waitpid(p,0)\nexcept:\n    pass\nprint \"hi\"",
+			"output": [
+				{
+					"stdout": "hi"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "1eaf84e8-0784-4bfb-b08e-aa4858a2d08d",
+			"input": "%fork n = factor(2^997-1)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 28293"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "7b58211c-33fd-4307-9e7b-9369bb8a2e61",
+			"input": "fork.children()",
+			"output": [
+				{
+					"stdout": "{29377: u'53c80365-ea50-404c-978e-47b947462f6f'}"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "7c778bd7-4c07-446f-ab54-8f62d10efc41",
+			"input": "fork.kill(28293)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "7c972ce6-46f2-462e-b6fd-5aed1d62f193",
+			"input": "%fork the_det = a.det()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 28026"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "c4186671-531e-4ba7-8b0b-2412f1fcfc92",
+			"input": "%fork the_det2 = a.det()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 28028"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "5eb03f9a-1237-49e6-acfc-fb7cf2f0c7c6",
+			"input": "the_det",
+			"output": [
+				{
+					"stdout": "2572946582829538633059523752558215289067074876399627639849312122795496789915361135640987129423750032501604356954366644381169067348506974736208408597644375329059003483630150320960653805208143003329665088531321398087904930950013396780836998662140942408640724003449905300068271127616108375787593522601340723531739736346542955888552046926911532937385598880060249303798496365080669138973974180706418340558200423340602730630460291228536289318055361964634079013830428996805147821448617926404685060542516579349825933697163493093957565484947038640775815597631452984181692782511199191059832548581424134847704295174862491769109377421144255178075220164382940089063624684265841117422257538879323056377214728795157051821931546273336217641269926059697983/204586912993508866875824356051724947013540127877691549342705710506008362275292159680204380770369009821930417757972504438076078534117837065833032974336"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "39cbf110-472c-4a61-b852-d6705a43a363",
+			"input": "the_det2",
+			"output": [
+				{
+					"stdout": "2572946582829538633059523752558215289067074876399627639849312122795496789915361135640987129423750032501604356954366644381169067348506974736208408597644375329059003483630150320960653805208143003329665088531321398087904930950013396780836998662140942408640724003449905300068271127616108375787593522601340723531739736346542955888552046926911532937385598880060249303798496365080669138973974180706418340558200423340602730630460291228536289318055361964634079013830428996805147821448617926404685060542516579349825933697163493093957565484947038640775815597631452984181692782511199191059832548581424134847704295174862491769109377421144255178075220164382940089063624684265841117422257538879323056377214728795157051821931546273336217641269926059697983/204586912993508866875824356051724947013540127877691549342705710506008362275292159680204380770369009821930417757972504438076078534117837065833032974336"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "90fc37d0-8bfb-4a13-b09c-47bf061b67ae",
+			"input": "a",
+			"output": [
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "f0d1a717-659a-46f2-950b-0141fb410741",
+			"input": "a",
+			"output": [
+				{
+					"stdout": "20"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "26e229b7-30e4-4a59-acf6-0d47ac49ca25",
+			"input": "b",
+			"output": [
+				{
+					"stdout": "7"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "5662faf2-87e0-45ab-adf6-d6663031dfe8",
+			"input": "x",
+			"output": [
+				{
+					"stdout": "12"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "008b8270-3a4d-4d5a-9bb1-8b470fc5c29a"
+		},
+		{
+			"id": "f62382ae-4f5b-4149-b05c-fa24602e34cd",
+			"input": "g = globals()",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "17adc4ad-3635-4cde-9844-87b302feb5cb",
+			"input": "def f(x,y):\n    print x, y\n    return\ng.on('change', None, f)",
+			"output": [
+				{
+					"stdout": "sage_salvus"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "<module 'sage_salvus' from '/home/wstein/salvus/salvus/sage_salvus.pyc'>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "f"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "<function f at 0x71a2ed8>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "de5b9692-9600-42eb-9ed2-adeca296b37d",
+			"input": "a = 5",
+			"output": [
+				{
+					"stdout": "sage_salvus"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "<module 'sage_salvus' from '/home/wstein/salvus/salvus/sage_salvus.pyc'>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "a"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "7e15190f-64b4-47e7-abc9-266203ab2e08",
+			"input": "a = 10",
+			"output": [
+				{
+					"stdout": "sage_salvus"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "<module 'sage_salvus' from '/home/wstein/salvus/salvus/sage_salvus.pyc'>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "a"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "10"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "0e988382-2b6f-4587-8417-6e73d08c7eb6",
+			"input": "2+3",
+			"output": [
+				{
+					"stdout": "sage_salvus"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "<module 'sage_salvus' from '/home/wstein/salvus/salvus/sage_salvus.pyc'>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "b878b76c-32ef-4a7f-b4a6-197811b3e29e"
+		},
+		{
+			"id": "3b01a442-aed2-427c-be0a-e720cd4a930f",
+			"input": "salvus._done = False\nid = salvus._id\nt = async(f, (20,), {}, cb)"
+		},
+		{
+			"id": "ede5cff2-e006-4b53-a460-15130de3fd3e",
+			"input": "print result",
+			"output": [
+				{
+					"stdout": "400"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "3cc8d8e3-a55b-4132-bea2-5499210b9b83",
+			"input": "result",
+			"output": [
+				{
+					"stdout": "400"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e61314b1-5b5f-478f-8b4f-c120205ae2bb"
+		},
+		{
+			"id": "d6f6cade-16ac-4357-bea6-344acb07884e"
+		},
+		{
+			"id": "aa9425fa-e9df-4e82-ba87-90112591ac2c"
+		},
+		{
+			"id": "ad8c4ac1-41dd-42b9-a53c-979d7bf23b09",
+			"input": "id = salvus._id\nprint id\nsalvus._conn.send_json({'event':'output', 'id':id, 'done':True})\nprint \"hi\"",
+			"output": [
+				{
+					"stdout": "a07f1137-dcdb-4056-92bd-cd08257dea86"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "6a12b646-9620-431e-9005-ff63b5ed82ca",
+			"input": "salvus._done = False\nid = salvus._id\nprint id",
+			"output": [
+				{
+					"stdout": "1ba24a41-1aca-4fcc-b809-0cf4cce89d17"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "a4103857-4249-4512-b865-12680b803968",
+			"input": "salvus._conn.send_json({'event':'output', 'id':id, 'done':True})",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "ccc2e1b6-4300-4d56-93a0-e35c19723c99",
+			"input": "result = 0\nsalvus._done = False\nid = salvus._id\nprint result\nt = async(f, (20,), {}, cb)",
+			"output": [
+				{
+					"stdout": "0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "400"
+				}
+			]
+		},
+		{
+			"id": "482a9dd4-9797-43fc-b023-d5c060b93016",
+			"input": "print result\nsalvus._conn.send_json({'event':'output', 'id':id, 'done':True})",
+			"output": [
+				{
+					"stdout": "0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "f8bdf05f-9001-490d-9f2d-67796e391f68",
+			"input": "result\nt.join()",
+			"output": [
+				{
+					"stdout": "400"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "3df10433-b10b-404f-ae0d-807fdab61371",
+			"input": "result",
+			"output": [
+				{
+					"stdout": "0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "b3434e5d-0de0-40f8-b7f8-548d1708a801",
+			"input": "os.getpid()",
+			"output": [
+				{
+					"stdout": "22682"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "eafd1236-add8-409e-8019-648d38f0ea39",
+			"input": "# salvus._done = False\n18"
+		},
+		{
+			"id": "dff930cb-51d1-43d4-bd86-d184ba166678",
+			"input": "3+5",
+			"output": [
+				{
+					"stdout": "8"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "ee45bd48-81b1-4ec1-be55-646570cc7041",
+			"input": "2+10",
+			"output": [
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e5fb9466-16d9-4977-83fe-b85b136b594c",
+			"input": "factor(2^997-1)",
+			"output": [
+				{
+					"stderr": "Error in lines 1-1\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 383, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "  File \"/home/wstein/sage/build/sage-5.6/local/lib/python2.7/site-packages/sage/rings/arith.py\", line 2464, in factor\n"
+				},
+				{
+					"stderr": "    int_ = int_, verbose=verbose)\n"
+				},
+				{
+					"stderr": "  File \"integer.pyx\", line 3420, in sage.rings.integer.Integer.factor (sage/rings/integer.c:21454)\n"
+				},
+				{
+					"stderr": "  File \"factorint.pyx\", line 289, in sage.rings.factorint.factor_using_pari (sage/rings/factorint.c:6986)\n"
+				},
+				{
+					"stderr": "  File \"factorint.pyx\", line 330, in sage.rings.factorint.factor_using_pari (sage/rings/factorint.c:6541)\n"
+				},
+				{
+					"stderr": "  File \"gen.pyx\", line 8568, in sage.libs.pari.gen.gen.factor (sage/libs/pari/gen.c:43030)\n"
+				},
+				{
+					"stderr": "KeyboardInterrupt\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "23b7f711-aae6-468c-b4c7-f748c1d56644",
+			"input": "2+3",
+			"output": [
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "f127c742-5292-4a9b-9f62-e1d5a86f47fb",
+			"input": "fork.children()",
+			"output": [
+				{
+					"stdout": "{}"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "042f601b-adc8-4ca7-968f-df161dadbd75",
+			"input": "%fork\nsleep(100)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 22399"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "b509f796-f497-40f7-bad3-a34c6c3626c3",
+			"input": "fork.children()",
+			"output": [
+				{
+					"stdout": "{}"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "9144a10c-4116-4b20-bbe9-032c5f47f319",
+			"input": "fork.kill(22399)",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "b3e81d23-996e-430f-a0f1-c21765920c6c",
+			"input": "!ps ax |grep 22399",
+			"output": [
+				{
+					"stdout": "22670 pts/8    S+     0:00 grep 22399\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "51be4249-46c0-46bc-9177-cb5493e21f56",
+			"input": "%fork\nM = ModularSymbols(389).cuspidal_submodule()",
+			"output": [
+				{
+					"stdout": "Forked subprocess 22673"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "d4fa1ecc-641d-42a8-81ef-9d06b7e1a4b1",
+			"input": "%fork\nD = M.decomposition()\nprint D",
+			"output": [
+				{
+					"stdout": "Forked subprocess 22675"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "[\nModular Symbols subspace of dimension 2 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field,\nModular Symbols subspace of dimension 4 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field,\nModular Symbols subspace of dimension 6 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field,\nModular Symbols subspace of dimension 12 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field,\nModular Symbols subspace of dimension 40 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field\n]"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "c0bcc3e1-253a-42ae-b4b3-89994e1421fd",
+			"input": "E = EllipticCurve([1..5])",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "18f9da82-0088-4110-baad-8c62c879b84d",
+			"input": "D[0]",
+			"output": [
+				{
+					"stdout": "Modular Symbols subspace of dimension 2 of Modular Symbols space of dimension 65 for Gamma_0(389) of weight 2 with sign 0 over Rational Field"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "4b2288c9-1f8e-4bc3-933f-452e0b4e00f5",
+			"input": "%fork \n%time B = D[0].q_expansion_basis(50)",
+			"output": [
+				{
+					"stdout": "Forked subprocess 22943"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "CPU time: 1.27 s, Wall time: 1.20 s"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "58999b21-7932-4db5-9ef3-4079babceaec",
+			"input": "B",
+			"output": [
+				{
+					"stdout": "[\nq - 2*q^2 - 2*q^3 + 2*q^4 - 3*q^5 + 4*q^6 - 5*q^7 + q^9 + 6*q^10 - 4*q^11 - 4*q^12 - 3*q^13 + 10*q^14 + 6*q^15 - 4*q^16 - 6*q^17 - 2*q^18 + 5*q^19 - 6*q^20 + 10*q^21 + 8*q^22 - 4*q^23 + 4*q^25 + 6*q^26 + 4*q^27 - 10*q^28 - 6*q^29 - 12*q^30 + 4*q^31 + 8*q^32 + 8*q^33 + 12*q^34 + 15*q^35 + 2*q^36 - 8*q^37 - 10*q^38 + 6*q^39 - 3*q^41 - 20*q^42 + 12*q^43 - 8*q^44 - 3*q^45 + 8*q^46 - 2*q^47 + 8*q^48 + 18*q^49 + O(q^50)\n]"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "4038ca15-aafc-456f-82b9-4568181b0919"
+		}
+	]
+}

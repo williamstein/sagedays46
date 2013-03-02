@@ -1,0 +1,94 @@
+{
+	"session_uuid": "087e1ebc-c93f-4bdb-99f1-bed406263a6e",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "85af6890-9212-440b-9ae3-8c9e7fe0f7c5",
+			"input": "@interact\ndef f(n,x=2,y=3):\n    print n,x,y\n    f.x = f.x + 1",
+			"output": [
+				{
+					"stdout": ""
+				}
+			],
+			"hide": [
+				"insert-below"
+			]
+		},
+		{
+			"id": "8e0d111e-2d7b-4e84-96fe-d03763be6ab8",
+			"input": "f",
+			"output": [
+				{
+					"stdout": "<sage_salvus.InteractFunction object at 0x52a56d0>"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "0dd34f19-42b4-4f8b-b18e-378caf482668",
+			"input": "f.interact_cell({})",
+			"output": [
+				{
+					"stdout": "None"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "3"
+				},
+				{
+					"stdout": " "
+				},
+				{
+					"stdout": "3"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "'_f'"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stderr": "Error in lines 1-1\n"
+				},
+				{
+					"stderr": "Traceback (most recent call last):\n"
+				},
+				{
+					"stderr": "  File \"sage_server.py\", line 397, in execute\n"
+				},
+				{
+					"stderr": "  File \"\", line 1, in <module>\n"
+				},
+				{
+					"stderr": "  File \"/home/wstein/salvus/salvus/sage_salvus.py\", line 206, in __call__\n"
+				},
+				{
+					"stderr": "  File \"\", line 5, in f\n"
+				},
+				{
+					"stderr": "  File \"/home/wstein/salvus/salvus/sage_salvus.py\", line 234, in __getattr__\n"
+				},
+				{
+					"stderr": "AttributeError: no interact control corresponding to input variable '_f'\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "c2ad2383-be7d-4f5f-804c-1c3568cff84a"
+		}
+	]
+}

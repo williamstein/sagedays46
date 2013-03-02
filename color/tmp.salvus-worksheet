@@ -1,0 +1,136 @@
+{
+	"session_uuid": "e3de597c-12f0-4ce7-8e76-6a1f82998052",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "c990aca5-36a4-49ef-bd31-0f2664ff0107",
+			"input": "colors = [ '#222222', '#9E5641', '#6C7E55', '#CAAF2B', '#7FB8D8', '#956D9D', '#4c8ea1', '#808080',\n                           '#454545', '#CC896D', '#C4DF90', '#FFE080', '#B8DDEA', '#C18FCB', '#6bc1d0', '#cdcdcd',\n                           '#cdcdcd', '#343434']\n\n    \ntheme = 'low-contrast'    ",
+			"output": [
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "80ee63f3-f92c-4cdd-99db-b97e3ccc9d48",
+			"input": "for i, c in enumerate(colors):\n    if i<=15:\n        print \"%s*color%s: %s\"%(theme, i,c)\n    elif i == 16:\n        print \"%s*foreground: %s\"%(theme, c)\n    elif i == 17:\n        print \"%s*background: %s\"%(theme, c)        ",
+			"output": [
+				{
+					"stdout": "low-contrast*color0: #222222"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color1: #9E5641"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color2: #6C7E55"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color3: #CAAF2B"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color4: #7FB8D8"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color5: #956D9D"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color6: #4c8ea1"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color7: #808080"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color8: #454545"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color9: #CC896D"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color10: #C4DF90"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color11: #FFE080"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color12: #B8DDEA"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color13: #C18FCB"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color14: #6bc1d0"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*color15: #cdcdcd"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*foreground: #cdcdcd"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "low-contrast*background: #343434"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "df6491c6-d5dc-4474-8bd1-5752985d7b41"
+		}
+	]
+}

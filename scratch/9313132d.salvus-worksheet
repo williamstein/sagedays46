@@ -1,0 +1,79 @@
+{
+	"session_uuid": "d1692230-c296-4092-875a-8e7de5030665",
+	"title": "Untitled",
+	"description": "No description",
+	"content": [
+		{
+			"id": "5e6c3865-77c4-4b11-8b2c-1d665ac0c3ce",
+			"input": "%fork\n\na = 10\nprint a\nsleep(5)\nb = 5\nprint b",
+			"output": [
+				{
+					"stdout": "Forked subprocess 27744"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "10"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				}
+			]
+		},
+		{
+			"id": "ecdf3111-7967-4bec-bb5c-27f2915e4c4b",
+			"input": "2+3",
+			"output": [
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "11e344e2-ceb5-4c44-a58b-818aa043a521",
+			"input": "a",
+			"output": [
+				{
+					"stdout": "10"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "3de14490-78c4-4aa4-94fe-a221ce0c5083",
+			"input": "b",
+			"output": [
+				{
+					"stdout": "5"
+				},
+				{
+					"stdout": "\n"
+				},
+				{
+					"stdout": ""
+				}
+			]
+		},
+		{
+			"id": "e0efb75f-2219-4b89-8a0b-3448cb4a4c72"
+		}
+	]
+}
